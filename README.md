@@ -1,2 +1,1 @@
-# Matematica
-proyecto matemática
+
