@@ -1457,10 +1457,228 @@ plot_persistence_diagram_radious(
 )
 
 #codigo hasta  la pag 100
+matrix_times.append(times_sc)
+number_of_vertices = number_of_vertices + vertices_step 
 
+vertices = [[random(), random()] for _ in range(number_of_vertices)]
 
+distance_m = distance_matrix(vertices, vertices)
+simplexwise_filtration = create_rips_simplexwise_filtration(vertices, max_simplex_dimension, distance_m)
 
+simplicial_complex_3 = [copy.deepcopy(vertices), copy.deepcopy(simplexwise_filtration)]
+simplicial_complex = copy.deepcopy(simplicial_complex_3)
+plot_simplicial_complex_3d(simplicial_complex)
 
+persistence_pairs_all, essential_indices_all, times_sc = measure_times(
+    simplicial_complex,
+    algorithms
+)
 
+comprobar_persistencia(persistence_pairs_all, essential_indices_all)
+plot_persistence_diagram_radious(
+    simplexwise_filtration,
+    distance_m,
+    persistence_pairs_all[0],
+    essential_indices_all[0]
+)
 
+matrix_times.append(times_sc)
+number_of_vertices = number_of_vertices + vertices_step
 
+vertices = [[random(), random()] for _ in range(number_of_vertices)]
+
+distance_m = distance_matrix(vertices, vertices)
+simplexwise_filtration = create_rips_simplexwise_filtration(vertices, threshold,
+    max_simplex_dimension, distance_m)
+
+simplicial_complex_1 = [copy.deepcopy(vertices), copy.deepcopy(simplexwise_filtration)]
+simplicial_complex = copy.deepcopy(simplicial_complex_1)
+plot_simplicial_complex_3d(simplicial_complex)
+
+persistence_pairs_all, essential_indices_all, times_sc = measure_times(
+    simplicial_complex,
+    algorithms
+)
+
+comprobar_persistencia(persistence_pairs_all, essential_indices_all)
+plot_persistence_diagram_radious(
+    simplexwise_filtration,
+    distance_m,
+    persistence_pairs_all[0],
+    essential_indices_all[0]
+)
+
+matrix_times.append(times_sc)
+number_of_vertices = number_of_vertices + vertices_step
+
+vertices = [[random(), random()] for _ in range(number_of_vertices)]
+
+distance_m = distance_matrix(vertices, vertices)
+simplexwise_filtration = create_rips_simplexwise_filtration(
+    vertices, threshold, max_simplex_dimension, distance_m)
+
+simplicial_complex_1 = [copy.deepcopy(vertices), copy.deepcopy(simplexwise_filtration)]
+simplicial_complex = copy.deepcopy(simplicial_complex_1)
+plot_simplicial_complex_3d(simplicial_complex)
+
+persistence_pairs_all, essential_indices_all, times_sc = measure_times(
+    simplicial_complex,
+    algorithms
+)
+
+comprobar_persistencia(persistence_pairs_all, essential_indices_all)
+plot_persistence_diagram_radious(
+    simplexwise_filtration,
+    distance_m,
+    persistence_pairs_all[0],
+    essential_indices_all[0]
+)
+
+matrix_times.append(times_sc)
+print_times(traspose(matrix_times),
+            ["sk_12_3", "sk_14_3", "sk_16_3", "sk_18_3", "sk_20_3"],
+            ["PHCOL_CC", "PHCOL_CC_COH", "PCOH", "RIPSER"])
+
+#dejamos de utilizar el algoridmo PHCOL_CC
+matrix_times = []
+algorithms = [ PHCOL_CC_COH, PCOH, RIPSER]
+
+threshold = 10
+max_simplex_dimension = 3
+vertices_step = 5
+
+number_of_vertices = 15
+
+vertices = [[random(), random()] for _ in range(number_of_vertices)]
+
+distance_m = distance_matrix(vertices, vertices)
+simplexwise_filtration = create_rips_simplexwise_filtration(
+    vertices, threshold, max_simplex_dimension, distance_m)
+
+simplicial_complex_1 = [copy.deepcopy(vertices), copy.deepcopy(simplexwise_filtration)]
+simplicial_complex = copy.deepcopy(simplicial_complex_1)
+
+plot_simplicial_complex_3d(simplicial_complex)
+
+persistence_pairs_all, essential_indices_all, times_sc = measure_times(
+    simplicial_complex,
+    algorithms
+)
+
+comprobar_persistencia(persistence_pairs_all, essential_indices_all)
+plot_persistence_diagram_radious(
+    simplexwise_filtration, 
+    distance_m,
+    persistence_pairs_all[0], 
+    essential_indices_all[0]
+)
+
+matrix_times.append(times_sc)
+number_of_vertices = number_of_vertices + vertices_step
+
+vertices = [[random(), random()] for _ in range(number_of_vertices)]
+
+distance_m = distance_matrix(vertices, vertices)
+simplexwise_filtration = create_rips_simplexwise_filtration(
+    vertices, threshold, max_simplex_dimension, distance_m)
+
+simplicial_complex_2 = [copy.deepcopy(vertices), copy.deepcopy(simplexwise_filtration)]
+simplicial_complex = copy.deepcopy(simplicial_complex_2)
+plot_simplicial_complex_3d(simplicial_complex)
+
+persistence_pairs_all, essential_indices_all, times_sc = measure_times(
+    simplicial_complex,
+    algorithms
+)
+
+comprobar_persistencia(persistence_pairs_all, essential_indices_all)
+plot_persistence_diagram_radious(
+    simplexwise_filtration, 
+    distance_m,
+    persistence_pairs_all[0], 
+    essential_indices_all[0]
+)
+
+matrix_times.append(times_sc)
+number_of_vertices = number_of_vertices + vertices_step
+
+vertices = [[random(), random()] for _ in range(number_of_vertices)]
+
+distance_m = distance_matrix(vertices, vertices)
+simplexwise_filtration = create_rips_simplexwise_filtration(
+    vertices, threshold, max_simplex_dimension, distance_m)
+
+simplicial_complex_3 = [copy.deepcopy(vertices), copy.deepcopy(simplexwise_filtration)]
+simplicial_complex = copy.deepcopy(simplicial_complex_3)
+plot_simplicial_complex_3d(simplicial_complex)
+
+persistence_pairs_all, essential_indices_all, times_sc = measure_times(
+    simplicial_complex,
+    algorithms
+)
+
+comprobar_persistencia(persistence_pairs_all, essential_indices_all)
+plot_persistence_diagram_radious(
+    simplexwise_filtration, 
+    distance_m,
+    persistence_pairs_all[0], 
+    essential_indices_all[0]
+)
+
+matrix_times.append(times_sc)
+number_of_vertices = number_of_vertices + vertices_step
+
+vertices = [[random(), random()] for _ in range(number_of_vertices)]
+
+distance_m = distance_matrix(vertices, vertices)
+simplexwise_filtration = create_rips_simplexwise_filtration(
+    vertices, threshold, max_simplex_dimension, distance_m)
+
+simplicial_complex_1 = [copy.deepcopy(vertices), copy.deepcopy(simplexwise_filtration)]
+simplicial_complex = copy.deepcopy(simplicial_complex_1)
+plot_simplicial_complex_3d(simplicial_complex)
+
+persistence_pairs_all, essential_indices_all, times_sc = measure_times(
+    simplicial_complex,
+    algorithms
+)
+
+comprobar_persistencia(persistence_pairs_all, essential_indices_all)
+plot_persistence_diagram_radious(
+    simplexwise_filtration, 
+    distance_m,
+    persistence_pairs_all[0], 
+    essential_indices_all[0]
+)
+
+matrix_times.append(times_sc)
+number_of_vertices = number_of_vertices + vertices_step
+
+vertices = [[random(), random()] for _ in range(number_of_vertices)]
+
+distance_m = distance_matrix(vertices, vertices)
+simplexwise_filtration = create_rips_simplexwise_filtration(
+    vertices, threshold, max_simplex_dimension, distance_m)
+
+simplicial_complex_1 = [copy.deepcopy(vertices), copy.deepcopy(simplexwise_filtration)]
+simplicial_complex = copy.deepcopy(simplicial_complex_1)
+plot_simplicial_complex_3d(simplicial_complex)
+
+persistence_pairs_all, essential_indices_all, times_sc = measure_times(
+    simplicial_complex,
+    algorithms
+)
+
+comprobar_persistencia(persistence_pairs_all, essential_indices_all)
+plot_persistence_diagram_radious(
+    simplexwise_filtration, 
+    distance_m,
+    persistence_pairs_all[0], 
+    essential_indices_all[0]
+)
+
+matrix_times.append(times_sc)
+print_times(traspose(matrix_times),
+            ["sk_15_3", "sk_20_3", "sk_25_3", "sk_30_3", "sk_35_3"],
+            ["PHCOL_CC_COH", "PCOH", "RIPSER"])
+# fin
